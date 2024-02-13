@@ -24,7 +24,7 @@
 }
 
 .cardItem .cardImg img{
-    transform: scale(0.65);
+    transform: scale(1);
 }
 
 /* descripcion */

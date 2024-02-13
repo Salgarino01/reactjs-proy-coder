@@ -1,16 +1,32 @@
-
+import { Link } from "react-router-dom"
 
 const ItemListContainer = (props) => {
     return(
         <ul >
-            <li>{props.itemUno}</li>
+        <li style={{ color: "whiteY"}}>
+            <Link to="category/combustible"> 
+                {props.itemUno} 
+            </Link>
+        </li>
 
-            <li>{props.itemDos}</li>
+        <li>
+            <Link to="category/motor">
+                {props.itemDos}
+            </Link>
+        </li>
 
-            <li>{props.itemTres}</li>
+        <li>
+            <Link to="category/transmision">
+                {props.itemTres}
+            </Link>
+        </li>
 
-            <li>{props.itemCuatro}</li>
-        </ul>
+        <li>
+            <Link to="category/otros">
+                {props.itemCuatro}
+            </Link>
+        </li>
+    </ul>
     )
 }
 
