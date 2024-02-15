@@ -1,34 +1,34 @@
 //import CardItem from "./CardItem";
-import fetchSimultion from "../../utils/fetchSimulation";
-import productos from "../../utils/Products";
-import { useState, useEffect } from "react";
-import "../../styles/containerCardItems.css"
-import { useParams } from "react-router-dom";
-
+import fetchSimultion from '../../utils/fetchSimulation';
+import productos from '../../utils/Products';
+import { useState, useEffect } from 'react';
+import '../../styles/containerCardItems.css';
+import { useParams } from 'react-router-dom';
+import CardItem from './CardItem';
 
 const ContainerCardItems = () => {
-  const [datos, setDatos] = useState( [] );
-  let {idCategory} = useParams()
-
+  const [datos, setDatos] = useState([]);
+  let { idCategory } = useParams();
 
   useEffect(() => {
-    setDatos( [] );
+    setDatos([]);
 
-    if(idCategory === undefined){
-        fetchSimultion(productos, 1000)
-        .then(resp => setDatos(resp))
-        .catch(error => console.log(error))
+    if (idCategory === undefined) {
+      fetchSimultion(productos, 1000)
+        .then((resp) => setDatos(resp))
+        .catch((error) => console.log(error));
     } else {
-        fetchSimultion(productos.filter(filter => filter.type === idCategory ), 2000)
-        .then(resp => setDatos(resp))
-        .catch(error => console.log(error))
+      fetchSimultion(
+        productos.filter((filter) => filter.type === idCategory),
+        2000
+      )
+        .then((resp) => setDatos(resp))
+        .catch((error) => console.log(error));
     }
-
-}, [idCategory])
+  }, [idCategory]);
   return (
     <div className="containerCardItems">
-      {
-      datos.map(product => (
+      {datos.map((product) => (
         <CardItem
           key={product.id}
           id={product.id}
@@ -37,8 +37,7 @@ const ContainerCardItems = () => {
           cantidad={product.stock}
           precio={product.price}
         />
-        ))
-        }
+      ))}
     </div>
   );
 };

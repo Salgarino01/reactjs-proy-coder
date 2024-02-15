@@ -4,11 +4,17 @@
     box-sizing: border-box;
 }
 
+h3{
+    text-transform: uppercase;
+}
+
 .detailsItem {
     display: flex;
     justify-content: center;
     width: 100%;
     height: calc(100vh - 60px);
+  
+
 }
 
 /* containerLeft */
@@ -38,6 +44,7 @@
     justify-content: center;
     align-items: flex-start;
     min-height: 600px;
+    
 }
 
 .detailsItem .containerRigth .descriptionItem {
@@ -70,8 +77,9 @@
 
 .detailsItem .containerRigth .cardDescription .description .descriptionTitle {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 30px;
     margin: 10px 0;
+
 }
 
 .detailsItem .containerRigth .cardDescription .description .parrafo {
@@ -83,12 +91,14 @@
 .detailsItem .containerRigth .cardDescription .cant{
     font-size: 18px;
     margin: 10px 0;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 
 /* precio */
 .detailsItem .containerRigth .cardDescription .precio{
-    color: #5b00fb;
+    color: black;
     font-weight: bold;
     font-size: 55px;
     margin: 10px 0;
@@ -108,7 +118,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #5b00fb;
+    border: 1px solid #06000e;
     border-radius: 50px;
     height: 60px;
 }
@@ -116,6 +126,7 @@
 .detailsItem .containerRigth .buttons .addCantCart span {
     font-weight: 20px;
     margin: 0 10px;
+    
 }
 
 .detailsItem .containerRigth .buttons .addCantCart div {
@@ -125,12 +136,10 @@
     padding: 0px 10px;
 }
 
-
-
 .detailsItem .containerRigth .buttons .addCantCart div #quitar, .detailsItem .containerRigth .buttons .addCantCart div #aumentar {
     background-color: #5b00fb;
     border: none;
-    color: white;
+    color: rgb(149, 12, 12);
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -145,3 +154,32 @@
     border: none;
     font-size: 21px;
 }
+
+button{
+    margin: 5px;
+    height: 40px;
+    width: 150px;
+    border-radius: 8px;
+    color: yellow;
+    background-color: black;
+}
+
+button#aumentar{
+    margin: 20px;
+    width: 25px;
+    height: 30px;
+    border-radius: 8px;
+    color: yellow;
+    background-color: black;
+}
+
+button#quitar{
+    margin: 10px;
+    width: 25px;
+    height: 30px;
+    border-radius: 8px;
+    color: yellow;
+    background-color: black;  
+}  
+
+

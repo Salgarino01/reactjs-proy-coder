@@ -1,12 +1,12 @@
-import Image from "./Image";
-import Description from "./Description";
-import "../../styles/detailsItem.css";
-import fetchSimultion from "../../utils/fetchSimulation";
-import productos from "../../utils/Products";
-import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
-import ButtonDetalles from "./Buttondetalles";
-
+import Image from './Image';
+import Description from './Description';
+import '../../styles/detailsItem.css';
+import fetchSimultion from '../../utils/fetchSimulation';
+import productos from '../../utils/Products';
+import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import ButtonDetalles from './Buttondetalles';
+import AddCantCart from './AddCantCart';
 
 const DetailsItem = () => {
   const [datos, setDatos] = useState([]);
@@ -28,28 +28,21 @@ const DetailsItem = () => {
       {datos.map((items) => (
         <>
           <div className="containerLeft">
-            <Image imagen={datos[0].imagenProduct.firtsImage} />
+            <img src={items.imageProduct.firtsImage} alt="" />
           </div>
 
           <div className="containerRigth">
-            <Description
-              title={datos[0].title}
-              parrafo={datos[0].description}
-              cantidad={datos[0].stock}
-              precio={datos[0].price}
-            />
+            <Description title={items.title} parrafo={items.description} cantidad={items.stock} precio={items.price} />
 
             <div className="butons">
-              <AdCantCart cant={5} />
-
-              <ButtonDetalles txt="Agregar al carrito" />
+              <AddCantCart cant={items.stock} />
+              <button id="detalles">Agregar al carrito</button>
             </div>
           </div>
         </>
-      ))
-      }
+      ))}
     </div>
-  )
-}
+  );
+};
 
 export default DetailsItem;

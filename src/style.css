@@ -9,7 +9,7 @@ body {
     font-family: "Fira Sans", sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
     color: yellow;
 }
@@ -66,16 +66,16 @@ header .containerCart {
     align-items: center;
 }
 
-header .containerCart .containerLength{
-width: 40px;
-height: 40px;
-display: flex;
-justify-content: center;
-position: relative;
-cursor: pointer;
+header .containerCart .containerLength {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
 }
 
-header .containerCart .containerLength .cantCart{
+header .containerCart .containerLength .cantCart {
     position: absolute;
     width: 20px;
     height: 20px;
